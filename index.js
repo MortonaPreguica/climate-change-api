@@ -94,6 +94,10 @@ newspapers.forEach(newspaper => {
       })
     }).catch(err => console.error(err))
 })
+
+app.get('/', (req, res) => {
+  res.json('Welcome to my API climate change news')
+})
 app.get('/news', (req, res) => { 
   res.json(articles)
 })
